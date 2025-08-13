@@ -27,7 +27,7 @@ namespace uPalette.Runtime.Core
         public Palette<Gradient> GradientPalette => _gradientPalette;
         public Palette<CharacterStyle> CharacterStylePalette => _characterStylePalette;
         public Palette<CharacterStyleTMP> CharacterStyleTMPPalette => _characterStyleTMPPalette;
-        public FloatPalette FloatPalette => _floatPalette;
+        public Palette<float> FloatPalette => _floatPalette;
 
         public MissingEntryErrorLevel MissingEntryErrorLevel
         {

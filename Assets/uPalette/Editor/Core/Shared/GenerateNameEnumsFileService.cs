@@ -61,6 +61,8 @@ namespace uPalette.Editor.Core.Shared
             input.PaletteDataList.Add(characterStylePaletteData);
             var characterStyleTMPPaletteData = CreatePaletteData("CharacterStyleTMP", store.CharacterStyleTMPPalette);
             input.PaletteDataList.Add(characterStyleTMPPaletteData);
+            var pixelPerUnitPaletteData = CreatePaletteData("PixelPerUnit", store.FloatPalette);
+            input.PaletteDataList.Add(pixelPerUnitPaletteData);
 
             return input;
         }

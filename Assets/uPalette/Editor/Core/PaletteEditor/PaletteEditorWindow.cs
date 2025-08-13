@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing.Imaging;
 using UnityEditor;
 using UnityEngine;
 using uPalette.Editor.Core.Shared;
@@ -30,6 +31,9 @@ namespace uPalette.Editor.Core.PaletteEditor
         [SerializeField] private CharacterStyleTMPPaletteEditorWindowContentsView _characterStyleTMPContentsView =
             new CharacterStyleTMPPaletteEditorWindowContentsView();
 
+        [SerializeField] private PixelPerUnitPaletteEditorWindowContentsView _pixelPerUnitContentsView =
+            new PixelPerUnitPaletteEditorWindowContentsView();
+
         private readonly Subject<Empty> _createButtonClickedSubject = new Subject<Empty>();
         private readonly Subject<Empty> _removeShortcutExecutedSubject = new Subject<Empty>();
         private readonly Subject<Empty> _redoShortcutExecutedSubject = new Subject<Empty>();
@@ -56,6 +60,7 @@ namespace uPalette.Editor.Core.PaletteEditor
         public GradientPaletteEditorWindowContentsView GradientContentsView => _gradientContentsView;
         public CharacterStylePaletteEditorWindowContentsView CharacterStyleContentsView => _characterStyleContentsView;
         public CharacterStyleTMPPaletteEditorWindowContentsView CharacterStyleTMPContentsView => _characterStyleTMPContentsView;
+        public PixelPerUnitPaletteEditorWindowContentsView PixelPerUnitContentsView => _pixelPerUnitContentsView;
         public PaletteEditorWindowEmptyView EmptyView => _emptyView;
 
         public void Reload()

@@ -19,6 +19,7 @@ namespace uPalette.Editor.Core.ThemeEditor
         private EditPaletteStoreService _editService;
         private ThemeEditorWindowEmptyViewController _emptyViewController;
         private ThemeEditorWindowContentsViewController<Gradient> _gradientContentsViewController;
+        private ThemeEditorWindowContentsViewController<float> _pixelPerUnitContentsViewController;
 
         public ThemeEditorWindowController(PaletteStoreRepository storeRepository, UPaletteEditorGUIState guiState,
             ThemeEditorWindow view)
@@ -83,6 +84,9 @@ namespace uPalette.Editor.Core.ThemeEditor
             _characterStyleTMPContentsViewController =
                 new ThemeEditorWindowContentsViewController<CharacterStyleTMP>(store.CharacterStyleTMPPalette,
                     _editService, view.CharacterStyleTMPContentsView);
+            _pixelPerUnitContentsViewController =
+                new ThemeEditorWindowContentsViewController<float>(store.FloatPalette,
+                    _editService, view.PixelPerUnitContentsView);
 
             _activeContentsViewController = GetPerTypeController(_guiState.ActivePaletteType.Value);
         }

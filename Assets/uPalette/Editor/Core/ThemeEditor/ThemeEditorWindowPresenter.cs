@@ -16,6 +16,7 @@ namespace uPalette.Editor.Core.ThemeEditor
         private ThemeEditorWindowContentsViewPresenter<Color> _colorContentsViewPresenter;
         private ThemeEditorEmptyViewPresenter _emptyViewPresenter;
         private ThemeEditorWindowContentsViewPresenter<Gradient> _gradientContentsViewPresenter;
+        private ThemeEditorWindowContentsViewPresenter<float> _pixelPerUnitContentsViewPresenter;
 
         public ThemeEditorWindowPresenter(PaletteStoreRepository storeRepository, UPaletteEditorGUIState guiState,
             ThemeEditorWindow view)
@@ -66,6 +67,9 @@ namespace uPalette.Editor.Core.ThemeEditor
             _characterStyleTMPContentsViewPresenter =
                 new ThemeEditorWindowContentsViewPresenter<CharacterStyleTMP>(store.CharacterStyleTMPPalette,
                     view.CharacterStyleTMPContentsView);
+            _pixelPerUnitContentsViewPresenter =
+                new ThemeEditorWindowContentsViewPresenter<float>(store.FloatPalette,
+                    view.PixelPerUnitContentsView);
 
             view.SetMode(ThemeEditorWindow.Mode.Contents);
         }

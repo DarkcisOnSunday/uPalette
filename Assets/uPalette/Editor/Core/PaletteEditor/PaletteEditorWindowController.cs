@@ -15,6 +15,7 @@ namespace uPalette.Editor.Core.PaletteEditor
         private PaletteEditorWindowContentsViewController<CharacterStyle> _characterStyleContentsViewController;
         private PaletteEditorWindowContentsViewController<CharacterStyleTMP> _characterStyleTMPContentsViewController;
         private PaletteEditorWindowContentsViewController<Color> _colorContentsViewController;
+        private PaletteEditorWindowContentsViewController<float> _pixelPerUnitContentsViewController;
 
         private EditPaletteStoreService _editService;
         private PaletteEditorWindowEmptyViewController _emptyViewController;
@@ -84,6 +85,9 @@ namespace uPalette.Editor.Core.PaletteEditor
             _characterStyleTMPContentsViewController =
                 new PaletteEditorWindowContentsViewController<CharacterStyleTMP>(store.CharacterStyleTMPPalette,
                     _editService, view.CharacterStyleTMPContentsView);
+            _pixelPerUnitContentsViewController = 
+                new PaletteEditorWindowContentsViewController<float>(store.FloatPalette, _editService,
+                    view.PixelPerUnitContentsView);
 
             _activeContentsViewController = GetPerTypeController(_guiState.ActivePaletteType.Value);
         }

@@ -25,7 +25,10 @@ namespace uPalette.Editor.Core.ThemeEditor
         
         [SerializeField]
         private ThemeEditorWindowContentsView _characterStyleTMPContentsView = new ThemeEditorWindowContentsView();
-
+        
+        [SerializeField]
+        private ThemeEditorWindowContentsView _pixelPerUnitContentsView = new ThemeEditorWindowContentsView();
+        
         private readonly Subject<Empty> _createButtonClickedSubject = new Subject<Empty>();
 
         private readonly ThemeEditorWindowEmptyView _emptyView = new ThemeEditorWindowEmptyView();
@@ -53,6 +56,7 @@ namespace uPalette.Editor.Core.ThemeEditor
         public ThemeEditorWindowContentsView GradientContentsView => _gradientContentsView;
         public ThemeEditorWindowContentsView CharacterStyleContentsView => _characterStyleContentsView;
         public ThemeEditorWindowContentsView CharacterStyleTMPContentsView => _characterStyleTMPContentsView;
+        public ThemeEditorWindowContentsView PixelPerUnitContentsView => _pixelPerUnitContentsView;
         public ThemeEditorWindowEmptyView EmptyView => _emptyView;
 
         public void Reload()

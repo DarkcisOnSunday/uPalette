@@ -34,4 +34,10 @@ namespace uPalette.Runtime.Core
     public sealed class CharacterStyleTMPEntryId : EntryId
     {
     }
+    
+    [Serializable]
+    public sealed class FloatEntryId : EntryId
+    {
+    }
+
 }
