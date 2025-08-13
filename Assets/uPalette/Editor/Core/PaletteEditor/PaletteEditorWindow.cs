@@ -31,8 +31,8 @@ namespace uPalette.Editor.Core.PaletteEditor
         [SerializeField] private CharacterStyleTMPPaletteEditorWindowContentsView _characterStyleTMPContentsView =
             new CharacterStyleTMPPaletteEditorWindowContentsView();
 
-        [SerializeField] private PixelPerUnitPaletteEditorWindowContentsView _pixelPerUnitContentsView =
-            new PixelPerUnitPaletteEditorWindowContentsView();
+        [SerializeField] private FloatPaletteEditorWindowContentsView _floatContentsView =
+            new FloatPaletteEditorWindowContentsView();
 
         private readonly Subject<Empty> _createButtonClickedSubject = new Subject<Empty>();
         private readonly Subject<Empty> _removeShortcutExecutedSubject = new Subject<Empty>();
@@ -60,7 +60,7 @@ namespace uPalette.Editor.Core.PaletteEditor
         public GradientPaletteEditorWindowContentsView GradientContentsView => _gradientContentsView;
         public CharacterStylePaletteEditorWindowContentsView CharacterStyleContentsView => _characterStyleContentsView;
         public CharacterStyleTMPPaletteEditorWindowContentsView CharacterStyleTMPContentsView => _characterStyleTMPContentsView;
-        public PixelPerUnitPaletteEditorWindowContentsView PixelPerUnitContentsView => _pixelPerUnitContentsView;
+        public FloatPaletteEditorWindowContentsView FloatContentsView => _floatContentsView;
         public PaletteEditorWindowEmptyView EmptyView => _emptyView;
 
         public void Reload()
@@ -71,6 +71,7 @@ namespace uPalette.Editor.Core.PaletteEditor
             _gradientContentsView.Setup();
             _characterStyleContentsView.Setup();
             _characterStyleTMPContentsView.Setup();
+            _floatContentsView.Setup();
             
             _application.SetupPaletteEditor(this);
         }
@@ -85,6 +86,7 @@ namespace uPalette.Editor.Core.PaletteEditor
             _gradientContentsView.Setup();
             _characterStyleContentsView.Setup();
             _characterStyleTMPContentsView.Setup();
+            _floatContentsView.Setup();
             
             _application.SetupPaletteEditor(this);
         }
@@ -132,6 +134,7 @@ namespace uPalette.Editor.Core.PaletteEditor
             _gradientContentsView.Dispose();
             _characterStyleContentsView.Dispose();
             _characterStyleTMPContentsView.Dispose();
+            _floatContentsView.Dispose();
             _emptyView.Dispose();
         }
 
@@ -228,6 +231,9 @@ namespace uPalette.Editor.Core.PaletteEditor
                     break;
                 case PaletteType.CharacterStyleTMP:
                     _activeWindowContentsView = _characterStyleTMPContentsView;
+                    break;
+                case PaletteType.Float:
+                    _activeWindowContentsView = _floatContentsView;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(paletteType), paletteType, null);

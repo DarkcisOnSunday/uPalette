@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace uPalette.Editor.Core.PaletteEditor
 {
-    internal sealed class PixelPerUnitPaletteEditorTreeView : PaletteEditorTreeView<float>
+    internal sealed class FloatPaletteEditorTreeView : PaletteEditorTreeView<float>
     {
-        public PixelPerUnitPaletteEditorTreeView(TreeViewState state) : base(state)
+        public FloatPaletteEditorTreeView(TreeViewState state) : base(state)
         {
         }
 

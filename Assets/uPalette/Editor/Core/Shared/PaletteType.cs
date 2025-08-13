@@ -6,6 +6,6 @@
         Gradient,
         CharacterStyle,
         CharacterStyleTMP,
-        PixelPerUnit
+        Float
     }
 }

@@ -16,7 +16,7 @@ namespace uPalette.Editor.Core.ThemeEditor
         private ThemeEditorWindowContentsViewPresenter<Color> _colorContentsViewPresenter;
         private ThemeEditorEmptyViewPresenter _emptyViewPresenter;
         private ThemeEditorWindowContentsViewPresenter<Gradient> _gradientContentsViewPresenter;
-        private ThemeEditorWindowContentsViewPresenter<float> _pixelPerUnitContentsViewPresenter;
+        private ThemeEditorWindowContentsViewPresenter<float> _floatContentsViewPresenter;
 
         public ThemeEditorWindowPresenter(PaletteStoreRepository storeRepository, UPaletteEditorGUIState guiState,
             ThemeEditorWindow view)
@@ -44,6 +44,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsViewPresenter?.Dispose();
             _characterStyleContentsViewPresenter?.Dispose();
             _characterStyleTMPContentsViewPresenter?.Dispose();
+            _floatContentsViewPresenter?.Dispose();
             _emptyViewPresenter?.Dispose();
             _disposables?.Dispose();
         }
@@ -54,6 +55,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsViewPresenter?.Dispose();
             _characterStyleContentsViewPresenter?.Dispose();
             _characterStyleTMPContentsViewPresenter?.Dispose();
+            _floatContentsViewPresenter?.Dispose();
             _emptyViewPresenter?.Dispose();
 
             _colorContentsViewPresenter =
@@ -67,9 +69,9 @@ namespace uPalette.Editor.Core.ThemeEditor
             _characterStyleTMPContentsViewPresenter =
                 new ThemeEditorWindowContentsViewPresenter<CharacterStyleTMP>(store.CharacterStyleTMPPalette,
                     view.CharacterStyleTMPContentsView);
-            _pixelPerUnitContentsViewPresenter =
+            _floatContentsViewPresenter =
                 new ThemeEditorWindowContentsViewPresenter<float>(store.FloatPalette,
-                    view.PixelPerUnitContentsView);
+                    view.FloatContentsView);
 
             view.SetMode(ThemeEditorWindow.Mode.Contents);
         }
@@ -80,6 +82,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsViewPresenter?.Dispose();
             _characterStyleContentsViewPresenter?.Dispose();
             _characterStyleTMPContentsViewPresenter?.Dispose();
+            _floatContentsViewPresenter?.Dispose();
             _emptyViewPresenter?.Dispose();
 
             _emptyViewPresenter = new ThemeEditorEmptyViewPresenter(view.EmptyView);

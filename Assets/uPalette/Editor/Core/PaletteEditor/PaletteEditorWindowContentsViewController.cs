@@ -204,7 +204,7 @@ namespace uPalette.Editor.Core.PaletteEditor
                     return item.EntryId;
                 })
                 .ToArray();
-
+            
             var findService = new FindAppliedGameObjectService();
             var gameObjects = findService.Execute(entryIds);
             Selection.objects = gameObjects;

@@ -27,7 +27,7 @@ namespace uPalette.Editor.Core.ThemeEditor
         private ThemeEditorWindowContentsView _characterStyleTMPContentsView = new ThemeEditorWindowContentsView();
         
         [SerializeField]
-        private ThemeEditorWindowContentsView _pixelPerUnitContentsView = new ThemeEditorWindowContentsView();
+        private ThemeEditorWindowContentsView _floatContentsView = new ThemeEditorWindowContentsView();
         
         private readonly Subject<Empty> _createButtonClickedSubject = new Subject<Empty>();
 
@@ -56,7 +56,7 @@ namespace uPalette.Editor.Core.ThemeEditor
         public ThemeEditorWindowContentsView GradientContentsView => _gradientContentsView;
         public ThemeEditorWindowContentsView CharacterStyleContentsView => _characterStyleContentsView;
         public ThemeEditorWindowContentsView CharacterStyleTMPContentsView => _characterStyleTMPContentsView;
-        public ThemeEditorWindowContentsView PixelPerUnitContentsView => _pixelPerUnitContentsView;
+        public ThemeEditorWindowContentsView FloatContentsView => _floatContentsView;
         public ThemeEditorWindowEmptyView EmptyView => _emptyView;
 
         public void Reload()
@@ -67,6 +67,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsView.Setup();
             _characterStyleContentsView.Setup();
             _characterStyleTMPContentsView.Setup();
+            _floatContentsView.Setup();
             
             _application.SetupThemeEditor(this);
         }
@@ -81,6 +82,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsView.Setup();
             _characterStyleContentsView.Setup();
             _characterStyleTMPContentsView.Setup();
+            _floatContentsView.Setup();
 
             application.SetupThemeEditor(this);
         }
@@ -106,6 +108,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsView.Dispose();
             _characterStyleContentsView.Dispose();
             _characterStyleTMPContentsView.Dispose();
+            _floatContentsView.Dispose();
             _emptyView.Dispose();
         }
 
@@ -197,6 +200,9 @@ namespace uPalette.Editor.Core.ThemeEditor
                     break;
                 case PaletteType.CharacterStyleTMP:
                     _activeWindowContentsView = _characterStyleTMPContentsView;
+                    break;
+                case PaletteType.Float:
+                    _activeWindowContentsView = _floatContentsView;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(paletteType), paletteType, null);

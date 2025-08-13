@@ -4,9 +4,9 @@ using uPalette.Runtime.Core.Synchronizer.Gradient;
 
 namespace uPalette.Runtime.Core.Synchronizer.PixelPerUnit
 {
-    public abstract class PixelPerUnitSynchronizer : ValueSynchronizer<float>
+    public abstract class FloatSynchronizer : ValueSynchronizer<float>
     {
-        [SerializeField] private GradientEntryId _entryId = new GradientEntryId();
+        [SerializeField] private FloatEntryId _entryId = new FloatEntryId();
 
         public override EntryId EntryId => _entryId;
         
@@ -16,7 +16,7 @@ namespace uPalette.Runtime.Core.Synchronizer.PixelPerUnit
         }
     }
 
-    public abstract class PixelPerUnitSynchronizer<T> : GradientSynchronizer where T : Component
+    public abstract class FloatSynchronizer<T> : FloatSynchronizer where T : Component
     {
         [SerializeField] [HideInInspector] private T _component;
 

@@ -190,7 +190,7 @@ MonoBehaviour:
       _keys:
       - 6921221d-1d74-4033-bee5-e0d01cb06122
       - 40b83e6c-74e3-4f98-ac6a-f8c4705ad8a9
-      - 066cbf8f-8b4a-441c-937e-c234e2780b88
+      - cdf73fb1-b2cf-4973-8e86-253101598e22
       _values:
       - _id: 6921221d-1d74-4033-bee5-e0d01cb06122
         _name:
@@ -300,9 +300,9 @@ MonoBehaviour:
               lineSpacing: 0
               paragraphSpacing: 0
               fontSharedMaterial: {fileID: 0}
-      - _id: 066cbf8f-8b4a-441c-937e-c234e2780b88
+      - _id: cdf73fb1-b2cf-4973-8e86-253101598e22
         _name:
-          _value: Main Button
+          _value: New Character Style TMP
         _values:
           _keys:
           - 10a7c335-bf25-4867-8af2-dd1b19273382
@@ -310,9 +310,9 @@ MonoBehaviour:
           - 4015608b-c889-497a-929c-95b799fb0fc4
           _values:
           - _value:
-              font: {fileID: 11400000, guid: a9afcabfe81ac4e7281a9df4b6a11e78, type: 2}
-              fontStyle: 32
-              fontSize: 80
+              font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+              fontStyle: 0
+              fontSize: 36
               enableAutoSizing: 0
               enableAutoSizeOptions: 1
               fontSizeMin: 18
@@ -325,31 +325,31 @@ MonoBehaviour:
               paragraphSpacing: 0
               fontSharedMaterial: {fileID: 0}
           - _value:
-              font: {fileID: 11400000, guid: b81fdff2855c444e68579f3df0109e91, type: 2}
-              fontStyle: 32
-              fontSize: 80.83
+              font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+              fontStyle: 0
+              fontSize: 36
               enableAutoSizing: 0
               enableAutoSizeOptions: 1
               fontSizeMin: 18
               fontSizeMax: 72
               characterWidthAdjustment: 0
               lineSpacingAdjustment: 0
-              characterSpacing: 10.9
+              characterSpacing: 0
               wordSpacing: 0
               lineSpacing: 0
               paragraphSpacing: 0
               fontSharedMaterial: {fileID: 0}
           - _value:
-              font: {fileID: 11400000, guid: 855ef1fd6df214cfbb3c753d5f5567d5, type: 2}
-              fontStyle: 33
-              fontSize: 80
+              font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+              fontStyle: 0
+              fontSize: 36
               enableAutoSizing: 0
               enableAutoSizeOptions: 1
               fontSizeMin: 18
               fontSizeMax: 72
               characterWidthAdjustment: 0
               lineSpacingAdjustment: 0
-              characterSpacing: 5.05
+              characterSpacing: 0
               wordSpacing: 0
               lineSpacing: 0
               paragraphSpacing: 0
@@ -373,11 +373,48 @@ MonoBehaviour:
       _ids:
       - 6921221d-1d74-4033-bee5-e0d01cb06122
       - 40b83e6c-74e3-4f98-ac6a-f8c4705ad8a9
-      - 066cbf8f-8b4a-441c-937e-c234e2780b88
+      - cdf73fb1-b2cf-4973-8e86-253101598e22
     _themeOrders:
       _ids:
       - 10a7c335-bf25-4867-8af2-dd1b19273382
       - 4015608b-c889-497a-929c-95b799fb0fc4
       - d91fac9e-c104-42c1-a5f8-6990c1d30827
     _activeThemeId: 10a7c335-bf25-4867-8af2-dd1b19273382
+  _floatPalette:
+    _entries:
+      _keys:
+      - 940d808e-7751-4388-b095-6a4cba54ec76
+      - 75787ded-c85e-4559-a20e-090cf0a872e0
+      _values:
+      - _id: 940d808e-7751-4388-b095-6a4cba54ec76
+        _name:
+          _value: r
+        _values:
+          _keys:
+          - f02ab6c3-a13a-468b-9641-9895ea10635f
+          _values:
+          - _value: 1
+      - _id: 75787ded-c85e-4559-a20e-090cf0a872e0
+        _name:
+          _value: s
+        _values:
+          _keys:
+          - f02ab6c3-a13a-468b-9641-9895ea10635f
+          _values:
+          - _value: 10
+    _themes:
+      _keys:
+      - f02ab6c3-a13a-468b-9641-9895ea10635f
+      _values:
+      - _id: f02ab6c3-a13a-468b-9641-9895ea10635f
+        _name:
+          _value: Default
+    _entryOrders:
+      _ids:
+      - 940d808e-7751-4388-b095-6a4cba54ec76
+      - 75787ded-c85e-4559-a20e-090cf0a872e0
+    _themeOrders:
+      _ids:
+      - f02ab6c3-a13a-468b-9641-9895ea10635f
+    _activeThemeId: f02ab6c3-a13a-468b-9641-9895ea10635f
   _missingEntryErrorLevel: 2

@@ -5,11 +5,11 @@ using uPalette.Runtime.Foundation.CharacterStyles;
 namespace uPalette.Editor.Core.PaletteEditor
 {
     [Serializable]
-    internal sealed class PixelPerUnitPaletteEditorWindowContentsView : PaletteEditorWindowContentsView<float>
+    internal sealed class FloatPaletteEditorWindowContentsView : PaletteEditorWindowContentsView<float>
     {
         protected override PaletteEditorTreeView<float> CreateTreeView(TreeViewState state)
         {
-            return new PixelPerUnitPaletteEditorTreeView(state);
+            return new FloatPaletteEditorTreeView(state);
         }
     }
 }

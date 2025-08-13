@@ -15,7 +15,7 @@ namespace uPalette.Editor.Core.PaletteEditor
         private PaletteEditorWindowContentsViewController<CharacterStyle> _characterStyleContentsViewController;
         private PaletteEditorWindowContentsViewController<CharacterStyleTMP> _characterStyleTMPContentsViewController;
         private PaletteEditorWindowContentsViewController<Color> _colorContentsViewController;
-        private PaletteEditorWindowContentsViewController<float> _pixelPerUnitContentsViewController;
+        private PaletteEditorWindowContentsViewController<float> _floatContentsViewController;
 
         private EditPaletteStoreService _editService;
         private PaletteEditorWindowEmptyViewController _emptyViewController;
@@ -69,7 +69,7 @@ namespace uPalette.Editor.Core.PaletteEditor
             _gradientContentsViewController?.Dispose();
             _characterStyleContentsViewController?.Dispose();
             _characterStyleTMPContentsViewController?.Dispose();
-            _pixelPerUnitContentsViewController?.Dispose();
+            _floatContentsViewController?.Dispose();
             _emptyViewController?.Dispose();
 
             _editService = new EditPaletteStoreService(store, new GenerateNameEnumsFileService(store));
@@ -86,9 +86,9 @@ namespace uPalette.Editor.Core.PaletteEditor
             _characterStyleTMPContentsViewController =
                 new PaletteEditorWindowContentsViewController<CharacterStyleTMP>(store.CharacterStyleTMPPalette,
                     _editService, view.CharacterStyleTMPContentsView);
-            _pixelPerUnitContentsViewController = 
+            _floatContentsViewController = 
                 new PaletteEditorWindowContentsViewController<float>(store.FloatPalette, _editService,
-                    view.PixelPerUnitContentsView);
+                    view.FloatContentsView);
 
             _activeContentsViewController = GetPerTypeController(_guiState.ActivePaletteType.Value);
         }
@@ -99,7 +99,7 @@ namespace uPalette.Editor.Core.PaletteEditor
             _gradientContentsViewController?.Dispose();
             _characterStyleContentsViewController?.Dispose();
             _characterStyleTMPContentsViewController?.Dispose();
-            _pixelPerUnitContentsViewController?.Dispose();
+            _floatContentsViewController?.Dispose();
             _emptyViewController?.Dispose();
 
             _emptyViewController = new PaletteEditorWindowEmptyViewController(view.EmptyView);
@@ -125,8 +125,8 @@ namespace uPalette.Editor.Core.PaletteEditor
                     return _characterStyleContentsViewController;
                 case PaletteType.CharacterStyleTMP:
                     return _characterStyleTMPContentsViewController;
-                case PaletteType.PixelPerUnit:
-                    return _pixelPerUnitContentsViewController;
+                case PaletteType.Float:
+                    return _floatContentsViewController;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
@@ -138,7 +138,7 @@ namespace uPalette.Editor.Core.PaletteEditor
             _gradientContentsViewController?.Dispose();
             _characterStyleContentsViewController?.Dispose();
             _characterStyleTMPContentsViewController?.Dispose();
-            _pixelPerUnitContentsViewController?.Dispose();
+            _floatContentsViewController?.Dispose();
             _emptyViewController?.Dispose();
             _disposables.Dispose();
         }

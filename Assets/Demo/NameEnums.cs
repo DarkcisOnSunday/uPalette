@@ -2,7 +2,7 @@ using System;
 
 namespace uPalette.Generated
 {
-    public enum ColorTheme
+public enum ColorTheme
     {
         Light,
         Classic,
@@ -166,7 +166,7 @@ namespace uPalette.Generated
     {
         Logo,
         Title,
-        MainButton,
+        NewCharacterStyleTMP,
     }
 
     public static class CharacterStyleTMPEntryExtensions
@@ -179,8 +179,49 @@ namespace uPalette.Generated
                     return "6921221d-1d74-4033-bee5-e0d01cb06122";
                 case CharacterStyleTMPEntry.Title:
                     return "40b83e6c-74e3-4f98-ac6a-f8c4705ad8a9";
-                case CharacterStyleTMPEntry.MainButton:
-                    return "066cbf8f-8b4a-441c-937e-c234e2780b88";
+                case CharacterStyleTMPEntry.NewCharacterStyleTMP:
+                    return "cdf73fb1-b2cf-4973-8e86-253101598e22";
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(entry), entry, null);
+            }
+        }
+    }
+
+    public enum FloatTheme
+    {
+        Default,
+    }
+
+    public static class FloatThemeExtensions
+    {
+        public static string ToThemeId(this FloatTheme theme)
+        {
+            switch (theme)
+            {
+                case FloatTheme.Default:
+                    return "f02ab6c3-a13a-468b-9641-9895ea10635f";
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(theme), theme, null);
+            }
+        }
+    }
+
+    public enum FloatEntry
+    {
+        r,
+        s,
+    }
+
+    public static class FloatEntryExtensions
+    {
+        public static string ToEntryId(this FloatEntry entry)
+        {
+            switch (entry)
+            {
+                case FloatEntry.r:
+                    return "940d808e-7751-4388-b095-6a4cba54ec76";
+                case FloatEntry.s:
+                    return "75787ded-c85e-4559-a20e-090cf0a872e0";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(entry), entry, null);
             }

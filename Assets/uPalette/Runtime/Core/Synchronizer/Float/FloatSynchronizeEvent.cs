@@ -3,9 +3,9 @@ using uPalette.Runtime.Core.Model;
 
 namespace uPalette.Runtime.Core.Synchronizer.PixelPerUnit
 {
-    public sealed class PixelPerUnitSynchronizeEvent : ValueSynchronizeEvent<float>
+    public sealed class FloatSynchronizeEvent : ValueSynchronizeEvent<float>
     {
-        [SerializeField] private GradientEntryId _entryId = new GradientEntryId();
+        [SerializeField] private FloatEntryId _entryId = new FloatEntryId();
 
         public override EntryId EntryId => _entryId;
 
