@@ -9,7 +9,7 @@ namespace uPalette.Runtime.Core.Synchronizer.CharacterStyle
 
         public override EntryId EntryId => _entryId;
         
-        internal override Palette<Foundation.CharacterStyles.CharacterStyle> GetPalette(PaletteStore store)
+        public override Palette<Foundation.CharacterStyles.CharacterStyle> GetPalette(PaletteStore store)
         {
             return store.CharacterStylePalette;
         }

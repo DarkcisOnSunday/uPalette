@@ -9,7 +9,7 @@ namespace uPalette.Runtime.Core.Synchronizer.Color
 
         public override EntryId EntryId => _entryId;
 
-        internal override Palette<UnityEngine.Color> GetPalette(PaletteStore store)
+        public override Palette<UnityEngine.Color> GetPalette(PaletteStore store)
         {
             return store.ColorPalette;
         }

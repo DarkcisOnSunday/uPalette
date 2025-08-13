@@ -9,7 +9,7 @@ namespace uPalette.Runtime.Core.Synchronizer.Gradient
 
         public override EntryId EntryId => _entryId;
 
-        internal override Palette<UnityEngine.Gradient> GetPalette(PaletteStore store)
+        public override Palette<UnityEngine.Gradient> GetPalette(PaletteStore store)
         {
             return store.GradientPalette;
         }
