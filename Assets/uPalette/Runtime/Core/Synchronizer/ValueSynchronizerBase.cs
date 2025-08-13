@@ -24,7 +24,7 @@ namespace uPalette.Runtime.Core.Synchronizer
             StopObserving();
         }
 
-        internal abstract Palette<T> GetPalette(PaletteStore store);
+        protected abstract Palette<T> GetPalette(PaletteStore store);
 
         public void SetEntryId(string entryId)
         {

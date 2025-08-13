@@ -23,11 +23,11 @@ namespace uPalette.Runtime.Core.Model
 
         private readonly CompositeDisposable _disposables = new CompositeDisposable();
 
-        public Entry() : this(Guid.NewGuid().ToString())
+        protected Entry() : this(Guid.NewGuid().ToString())
         {
         }
 
-        public Entry(string entryId)
+        protected Entry(string entryId)
         {
             _id = entryId;
             _name.Value = GetDefaultName();
