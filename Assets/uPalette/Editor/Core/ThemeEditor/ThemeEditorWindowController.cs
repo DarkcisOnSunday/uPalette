@@ -69,6 +69,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsViewController?.Dispose();
             _characterStyleContentsViewController?.Dispose();
             _characterStyleTMPContentsViewController?.Dispose();
+            _pixelPerUnitContentsViewController?.Dispose();
             _emptyViewController?.Dispose();
 
             _editService = new EditPaletteStoreService(store, new GenerateNameEnumsFileService(store));
@@ -97,6 +98,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsViewController?.Dispose();
             _characterStyleContentsViewController?.Dispose();
             _characterStyleTMPContentsViewController?.Dispose();
+            _pixelPerUnitContentsViewController.Dispose();
             _emptyViewController?.Dispose();
 
             _emptyViewController = new ThemeEditorWindowEmptyViewController(view.EmptyView);
@@ -122,6 +124,8 @@ namespace uPalette.Editor.Core.ThemeEditor
                     return _characterStyleContentsViewController;
                 case PaletteType.CharacterStyleTMP:
                     return _characterStyleTMPContentsViewController;
+                case PaletteType.PixelPerUnit:
+                    return _pixelPerUnitContentsViewController;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
@@ -133,6 +137,7 @@ namespace uPalette.Editor.Core.ThemeEditor
             _gradientContentsViewController?.Dispose();
             _characterStyleContentsViewController?.Dispose();
             _characterStyleTMPContentsViewController?.Dispose();
+            _pixelPerUnitContentsViewController?.Dispose();
             _emptyViewController?.Dispose();
             _disposables.Dispose();
         }
